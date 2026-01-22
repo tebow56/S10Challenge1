@@ -4,11 +4,12 @@ const validarHora = (req, res, next) => {
     
     if (hours < 12) {
         return res.status(403).send(`<h1>Bienvenido</h1>
-            <p>La hora actual es ${req.dateType }. Solo disponible después de las 12 de la mañana</p><button> <a href="/endroute"> aquí </a></button>`)
+            <p>La hora actual es ${req.dateType } Solo puedes entrar a la Ruta final después de las 12 de la mañana</p><button> <a href="/endroute"> aquí </a></button>`)
         
     } else {
-        return res.redirect('/endroute')
+        res.send(`<h1>Bienvenido</h1> <p> Esta es la Ruta final</p>`)
     }
+    next()
    
 }
 

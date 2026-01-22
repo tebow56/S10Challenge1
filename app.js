@@ -1,14 +1,14 @@
 const express = require ('express')
 const app = express ()
 const indexRouter = require('./routes/index.js');
-const endrouteRouter = require('./routes/endroute.js');
 const horaMiddleware = require('./middleWares/horaMiddleware.js'); 
 const validarHora = require ('./middleWares/validarHora.js')
 
 
 app.use (horaMiddleware)
-app.use (indexRouter);
-app.use (validarHora, endrouteRouter);
+
+app.use ('/',indexRouter);
+app.use ('/endroute',validarHora );
 
 
 

@@ -6,6 +6,5 @@ router.get ('/', (req,res)=> {
         <p> Para ir al enroute pulse <button><a href="/endroute"> aquí </a></button></p>`)
 })
 
-router
 
 module.exports = router;
